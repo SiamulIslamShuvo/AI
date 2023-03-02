@@ -17,6 +17,54 @@
       crossorigin="anonymous"
     ></script>
     <title>AI Universe Hub</title>
+    <!-- custom Styles -->
+
+    <style>
+      .modal-description {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 35px;
+        /* or 140% */
+        color: #111111;
+      }
+      .pricing-box {
+        background: #ffffff;
+        border-radius: 16px;
+        width: 132px;
+        height: 100px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #03a30a;
+      }
+      .position-div {
+        position: relative;
+      }
+      .position-main {
+        position: relative;
+      }
+      .position {
+        position: absolute;
+        top: 43px;
+        right: 92px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .position {
+          position: absolute;
+          top: 450px;
+          right: 35px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="container text-center mt-4">
@@ -51,17 +99,6 @@
 
     <!-- Modal -->
     <section>
-      <!-- Button trigger modal -->
-      <!-- <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#toolsModal"
-      >
-        Launch demo modal
-      </button> -->
-
-      <!-- Modal -->
       <div
         class="modal fade"
         id="toolsModal"
@@ -69,10 +106,13 @@
         aria-labelledby="toolsModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div
+          class="modal-dialog modal-dialog-centered"
+          style="max-width: 1100px !important"
+        >
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="toolsModalLabel">Modal title</h1>
+              <h1 class="modal-title fs-5" id="toolsModalLabel"></h1>
               <button
                 type="button"
                 class="btn-close"
@@ -80,7 +120,9 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div id="modal_body" class="modal-body">...</div>
+            <div class="modal-body">
+              <div id="modal_body" class="container-fluid"></div>
+            </div>
             <div class="modal-footer">
               <button
                 type="button"
@@ -94,16 +136,6 @@
         </div>
       </div>
     </section>
-
-    <div class="d-flex">
-      <div>
-        <p>${tool.description}</p>
-      </div>
-      <div>
-        <img src="${tool.image}" alt="" />
-        <p>asdada</p>
-      </div>
-    </div>
 
     <!-- scripts -->
     <script src="./js/app.js"></script>

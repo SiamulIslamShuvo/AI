@@ -29,9 +29,7 @@ const displayData = (tools) => {
       <img src="${tool.image}" class="card-img-top" alt="..." />
       <div class="card-body">
         <h2 class="card-title">Features</h2>
-        <ul id="feat">
-        ${feat}
-        </ul>
+        <ul id="feat">${feat}</ul>
         <div class="d-flex justify-content-between border-top">
           <div>
             <h4>${tool.name}</h4>
@@ -58,13 +56,42 @@ const displayData = (tools) => {
     // modal container
     let modalContent = `
     
-    <div class="d-flex">
-      <div>
-        <p>${tool.description}</p>
+    <div class="row justify-content-evenly">
+      <div class="col-md-5 mr-2" style="border:1px solid #EB5757;border-radius: 16px; background: rgba(235, 87, 87, 0.05);">
+      <div class="pt-2">
+      <p class="modal-description">${tool.description}</p>
+      <div class="d-flex justify-content-between">
+        <div class="col-md-3 m-2 p-2 pricing-box">$10/month Basic</div>
+        <div class="col-md-3 mt-2  p-2  pricing-box">$10/month Basic</div>
+        <div class="col-md-3 m-2 p-2 pricing-box">$10/month Basic</div>
+        
       </div>
-      <div>
-        <img src="${tool.image}" alt="" height="339" width ="437" />
-        <p>asdada</p>
+      <div class="d-flex justify-content-evenly" >
+          <div>
+          <h4>Features</h4>
+          <ul>
+            <li>asdasd</li>
+            <li>asdasd</li>
+            <li>asdasd</li>
+          </ul>
+          </div>
+          <div>
+          <h4>Integration</h4>
+          <ul>
+          <li>asdasd</li>
+            <li>asdasd</li>
+            <li>asdasd</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+        
+      </div>
+      <div class="col-md-5" style="background: #FFFFFF position-div">
+        <img class = "w-100 mt-4 position-main" style = "border: 1px solid #E7E7E7; border-radius:16px;" src="${tool.image}" alt=""  />
+        <button type="button" class="btn btn-danger position"> 94% Accuracy</button>
+        <h1 class="text-center">How Are you doing</h1>
+        <p class="text-center">How Are you doing</p>
       </div>
     </div>
     
