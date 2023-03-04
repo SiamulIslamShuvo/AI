@@ -32,7 +32,7 @@
       .pricing-box {
         background: #ffffff;
         border-radius: 16px;
-        width: 132px;
+        width: 120px;
         height: 100px;
         font-family: "Inter";
         font-style: normal;
@@ -43,33 +43,25 @@
         align-items: center;
         text-align: center;
 
-        color: #03a30a;
+        /* color: #03a30a; */
       }
-      .position-div {
-        position: relative;
-      }
+
       .position-main {
         position: relative;
       }
       .position {
         position: absolute;
-        top: 43px;
-        right: 92px;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .position {
-          position: absolute;
-          top: 450px;
-          right: 35px;
-        }
+        top: -230px;
+        right: 10px;
       }
     </style>
   </head>
   <body>
     <header class="container text-center mt-4">
       <h1>AI Universe Hub</h1>
-      <button type="button" class="btn btn-danger">Sort By Date</button>
+      <button type="button" onclick="sortByDate()" class="btn btn-danger">
+        Sort By Date
+      </button>
     </header>
     <section class="container mt-4">
       <div id="tools-container" class="row row-cols-1 row-cols-md-3"></div>
@@ -84,7 +76,8 @@
         See More
       </button>
     </section>
-
+    <div id="is_full_content" style="display: none">false</div>
+    <div id="is_sort" style="display: none">false</div>
     <!-- Loading animation   -->
     <section id="loader" class="">
       <div
@@ -120,7 +113,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div id="modal_parent" class="modal-body">
               <div id="modal_body" class="container-fluid"></div>
             </div>
             <div class="modal-footer">
